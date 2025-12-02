@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct Student{
+    int id;
+    int numMarks;
+    float marks[]; 
+};
+int main(){
+    int n,i;
+    struct Student *s;
+    float sum=0;
+    printf("Enter student ID:");
+    scanf("%d",&n);
+    printf("Enter number of marks:");
+    int count;
+    scanf("%d",&count);
+    s=malloc(sizeof(struct Student)+count*sizeof(float));
+    if(s==NULL){
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    s->id = n;
+    s->numMarks=count;
+    printf("Enter %d marks:",count);
+    for(i=0;i<count;i++){
+        scanf("%f",&s->marks[i]);
+        sum+=s->marks[i];
+    }
+    printf("Student ID: %d\n", s->id);
+    printf("Marks:");
+    for(i=0;i<count;i++){
+        printf("%.2f ",s->marks[i]);
+    }
+    printf("\nAverage: %.2f\n",sum/count);
+    free(s);
+    return 0;
+}
