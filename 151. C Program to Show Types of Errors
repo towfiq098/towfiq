@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+    printf("Demonstrating types of errors in C:\n");
+    printf("1. Syntax Error Example: missing semicolon\n");
+    printf("2. Runtime Error Example: division by zero\n");
+    printf("3. Logical Error Example: wrong formula\n");
+    return 0;
+}
