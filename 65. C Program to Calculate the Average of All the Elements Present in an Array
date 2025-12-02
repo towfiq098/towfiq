@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int n,i;
+    float sum = 0, average;
+    printf("Size of Array :");
+    scanf("%d",&n);
+    int arr[n];
+    printf("elements of Arrays:\n");
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
+        sum=sum+arr[i];
+    }
+    average=sum/n;
+    printf("average of Arrays: %.2f\n",average);
+    return 0;
+}
