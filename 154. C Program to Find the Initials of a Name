@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char name[100];
+    printf("Enter full name:");
+    scanf(" %[^\n]",name);
+    printf("Initials:");
+    int len=strlen(name);
+    printf("%c",name[0]);
+    for(inti=0;i<len;i++){
+        if(name[i]==' '&&i+1<len){
+            printf("%c",name[i+1]);
+        }
+    }
+    printf("\n");
+    return 0;
+}
