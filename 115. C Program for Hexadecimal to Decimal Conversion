@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+int number;
+printf("Hex-Decimal number =");
+scanf("%x",&number);
+printf("Decimal number =%d",number);
+    return 0;
+}
