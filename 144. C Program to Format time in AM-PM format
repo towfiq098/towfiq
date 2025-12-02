@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int hour,minute,second;
+    char period[3];
+    printf("Enter time (HH MM SS in 24-hour format):");
+    scanf("%d%d%d",&hour,&minute,&second);
+    if(hour>=12){
+        strcpy(period,"PM");
+        if(hour>12)hour-=12;
+    } 
+    else{
+        strcpy(period,"AM");
+        if(hour==0)hour=12;
+    }
+    printf("Time in AM-PM format: %02d:%02d:%02d %s\n",hour, minute,second,period);
+    return 0;
+}
