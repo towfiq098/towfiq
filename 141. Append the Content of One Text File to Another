@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    char src[50],dest[50];
+    FILE *source,*destination;
+    char ch;
+    printf("Enter source file name:");
+    scanf("%s",src);
+    printf("Enter destination file name:");
+    scanf("%s",dest);
+    source=fopen(src,"r");
+    destination=fopen(dest,"a"); 
+    if(source==NULL||destination==NULL){
+        printf("Error opening files.\n");
+        return 1;
+    }
+    while((ch=fgetc(source))!=EOF){
+        fputc(ch,destination);
+    }
+    printf("Content appended successfully.\n");
+    fclose(source);
+    fclose(destination);
+    return 0;
+}
