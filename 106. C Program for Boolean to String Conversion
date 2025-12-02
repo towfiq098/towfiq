@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int booleanValue;
+    char *result;
+    printf("Enter 1 for True or 0 for False:");
+    scanf("%d",&booleanValue);
+    if(booleanValue==1)
+        result="True";
+    else
+        result="False";
+    printf("Boolean to String: %s\n",result);
+    return 0;
+}
