@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[100];
+    int index,len;
+    printf("Enter a string:");
+    scanf("%s",str);
+    printf("Enter index:");
+    scanf("%d",&index);
+    len=strlen(str);
+    if(index>=0&&index<len)
+        printf("Unicode of '%c'=%d\n",str[index], str[index]);
+    else
+        printf("Invalid index!\n");
+    return 0;
+}
