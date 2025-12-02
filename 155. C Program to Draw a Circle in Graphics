@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int r;
+    printf("Enter radius of circle:");
+    scanf("%d",&r);
+    for(int y=r;y>=-r;y--){
+        for(int x=-r;x<=r;x++){
+            if((int)(sqrt(x*x+y*y)+0.5)==r)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
