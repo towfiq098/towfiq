@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    char filename[50];
+    printf("Enter file name to make read-only:");
+    scanf("%s",filename);
+    if(remove(filename)==0){
+        printf("File permission changed (delete restricted).\n");
+    } else {
+        perror("Error making file read-only");
+    }
+    return 0;
+}
